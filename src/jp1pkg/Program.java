@@ -11,7 +11,7 @@ public class Program {
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.name = name + "+x";
 	}
 
 	/*public String getName1() {
@@ -21,7 +21,7 @@ public class Program {
 	public void setName1(String name) {
 		this.name1 = name;
 	}
-	
+
 	Program() {
 		name0 = "Initial Program Name";
 		this.setName1("=Alter Program Name");
@@ -44,7 +44,15 @@ public class Program {
 		System.out.println(program1.name);
 		System.out.println(program1.name0);
 		System.out.println(program1.name1);
-		
+
+		//Counter class with static variable and method
+		Counter c1 = new Counter();
+		Counter c2 = new Counter();
+		System.out.println("Static variable Count /next 3 output lines/");
+		System.out.println(c1.COUNT);
+		System.out.println(c2.COUNT);
+		System.out.println(Counter.COUNT);
+		Counter.horn(); //method
 		
 		//arrays learn
 
@@ -57,9 +65,10 @@ public class Program {
 		for(int x = 0; x<iArr.length; x++) {
 			sum += iArr[x];
 		}
-		System.out.println("sum");
+		System.out.println("sum variable /int/");
+		sum = Math.abs(sum); //JDK Math Class
 		System.out.println(sum);
-		
+
 		System.out.println("int position");
 		for(int x = 0; x<iArr3.length; x++) {
 			for(int y = 0; y<iArr3.length; y++) {
@@ -67,25 +76,25 @@ public class Program {
 			}
 		}
 
-		System.out.println("str position");
+		System.out.println("string multidimension array elements position");
 		for(int x = 0; x<sArr3.length; x++) {
 			for(int y = 0; y<sArr3.length; y++) {
 				System.out.println(sArr3[x][y] + " x"+ (x+1) + " y" + (y+1));
 			}
 		}
-			
-		System.out.println("int arr for each and lenght");
+
+		System.out.println("int array for each and lenght");
 		for (int x: iArr) {
 			System.out.println(x);
 		}
 		System.out.println(iArr3.length);
-		
 
-	
-		
-		
+
+
+
+
 		//for (int x: iArr3) {System.out.println(x);} //--error!
-	
+
 		System.out.println("All done!");
 	}
 
